@@ -1,0 +1,8 @@
+{
+  "ignoreCommand": "git check-ignore ./docs/*",
+  "git": {
+    "deploymentEnabled": {
+      "docs": false
+    }
+  }
+}

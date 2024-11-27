@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark Theme Colors */
+    --background: 17 19% 9%;      /* #1A1614 Warm Dark Brown */
+    --foreground: 33 50% 93%;     /* #F9EBE0 Warm Off-white */
+    --card: 17 19% 9%;
+    --card-foreground: 33 50% 93%;
+    --popover: 17 19% 9%;
+    --popover-foreground: 33 50% 93%;
+    --primary: 24 100% 63%;       /* #FF8C42 Main Orange */
+    --primary-foreground: 17 19% 9%;
+    --secondary: 17 19% 15%;      /* #2C2320 Warmer Dark Brown */
+    --secondary-foreground: 33 50% 93%;
+    --muted: 17 19% 15%;
+    --muted-foreground: 33 50% 83%;
+    --accent: 14 64% 53%;         /* #D35F3C Terracotta */
+    --accent-foreground: 33 50% 93%;
+    --destructive: 14 64% 53%;
+    --destructive-foreground: 33 50% 93%;
+    --border: 17 19% 15%;
+    --input: 17 19% 15%;
+    --ring: 24 100% 63%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer utilities {
+  .gradient-dark {
+    @apply bg-gradient-dark text-white;
+  }
+  
+  .gradient-accent {
+    @apply bg-gradient-accent text-white;
+  }
+  
+  .gradient-warm {
+    @apply bg-gradient-warm text-foreground;
+  }
+
+  .hover-transition {
+    @apply transition-colors duration-200;
+  }
+
+  .hover-brand {
+    @apply hover:bg-brand-hover hover-transition;
+  }
+
+  .hover-primary {
+    @apply hover:bg-primary-hover hover-transition;
+  }
+
+  .hover-secondary {
+    @apply hover:bg-secondary-hover hover-transition;
+  }
+
+  .hover-accent {
+    @apply hover:bg-accent-hover hover-transition;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-500 text-white hover-brand rounded-md px-4 py-2;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-500 text-foreground hover-secondary rounded-md px-4 py-2;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white hover-accent rounded-md px-4 py-2;
+  }
+
+  .card {
+    @apply bg-card text-card-foreground rounded-lg border border-border p-4 shadow-sm;
+  }
+
+  .input {
+    @apply bg-background text-foreground border border-input rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ring;
+  }
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
